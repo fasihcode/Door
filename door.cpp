@@ -17,6 +17,31 @@ public:
     bool isDoorLocked() const;
 };
 
+Door::Door() : isOpen(false), isLocked(false) {}
+
+void Door::openDoor() {
+    isOpen = true;
+}
+
+void Door::closeDoor() {
+    isOpen = false;
+}
+
+void Door::lockDoor() {
+    isLocked = true;
+}
+
+void Door::unlock() {
+    isLocked = false;
+}
+
+bool Door::isDoorOpen() const {
+    return isOpen;
+}
+
+bool Door::isDoorLocked() const {
+    return isLocked;
+}
 
 
 int main() {
